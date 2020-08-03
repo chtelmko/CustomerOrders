@@ -1,0 +1,45 @@
+<h1>Orders#index</h1>
+<h1>Order Summary</h1>
+
+<%= link_to 'Start New order', new_order_path %>
+ 
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Order#</th>
+    <th>Ship Date</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%=email.string %></td>
+      <td><%= order.integer %></td>
+      <td><%= order.date %></td>
+      <td><%= order.text %></td>
+      
+      <td><%= link_to 'Show', order_path(order) %></td>
+      <td><%= link_to 'Edit', edit_order_path(order) %></td>
+      <td><%= link_to 'Destroy', order_path(order),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  <%= link_to 'Back', orders_path %>
+  
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Find me in app/views/orders/index.html.erb</p>

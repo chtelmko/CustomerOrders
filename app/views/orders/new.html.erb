@@ -1,0 +1,39 @@
+
+<h1>New Order</h1>
+
+
+<%= form_with scope: :order, url: orders_path,  local: true do |form| %>
+  <p>
+    <%= form.label :Order_Number %><br>
+    <%= form.text_field :integer %>
+  </p>
+  
+ <h3>Address</h3>
+  <p>
+    <%= form.label :street_address %><br>
+    <%= form.text_field :string %>
+  </p>
+   <p>
+    <%= form.label :State %><br>
+    <%= form.text_field :string %>
+  </p>
+ 
+  <p>
+    <%= form.label :Zip_code %><br>
+    <%= form.text_field :string %>
+  </p>
+ <p>
+     <br>
+      <br>
+    <%= form.label :Ship_Date %><br>
+    <%= form.text_field :date %>
+  </p>
+ <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
